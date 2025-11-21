@@ -4,7 +4,7 @@
 # Author:
 <Your Ritiika Jain>
 
-# Status:
+# Status: QA
 Draft | Review | QA | Approved | Published
 
 # Content:

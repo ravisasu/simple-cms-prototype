@@ -2,11 +2,11 @@
 <Enter your article title>
 
 # Author:
-<Rajesh KVN>
+<Shashikanth >
 
 # Status:
-Review 
+ Approved 
 
 # Content:
 <Write your content here...>
-SC-200: Introduction
+Azure DevOps: Introduction
