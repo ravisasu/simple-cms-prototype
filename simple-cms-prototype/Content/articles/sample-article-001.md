@@ -5,7 +5,9 @@ Using Git as a Mini CMS Workflow
 <Your Name>
 
 # Status:
-Draft 
+Review
+# Reviewer Notes:
+Content looks good. Needs additional examples.
 
 # Content:
 <Write your content here...>
