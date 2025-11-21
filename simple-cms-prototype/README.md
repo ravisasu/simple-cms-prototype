@@ -11,7 +11,7 @@ This repository contains helper scripts to manage article files and their lifecy
 - `scripts/move_to_stage.py`: Move an article file to a named stage folder (e.g. `Approval`) and update its status in `content_status.json`.
 - `scripts/move_to_published.py`: (empty placeholder) Intended place for a standalone mover to publish articles.
 - `scripts/publish_article.py`: Simple script to move an article from `content/articles` to `content/published`.
-- `scripts/update_status.py`: Update only the `current_status` and `last_updated` fields for an article in `content_status.json`.
+- `scripts/update_status.py`: (deprecated) Wrapper maintained for compatibility; forwards to `scripts/sync_status.py`.
 - `scripts/workflow_transition.py`: Update an article's status in JSON and (when set to `Published`) move the file to the published folder; includes folder-name fallbacks.
 
 ## Examples (PowerShell)
@@ -39,8 +39,10 @@ python .\scripts\move_to_stage.py sample-article-004 Approval
 
 ### Update only the JSON status (no file move)
 
+Prefer `sync_status.py` which updates JSON and the markdown header; it can be used where you only want JSON changed as well.
+
 ```powershell
-python .\scripts\update_status.py sample-article-003 Review
+python .\scripts\sync_status.py sample-article-003 Review
 ```
 
 ### Publish an article (workflow transition will move on `Published`)
