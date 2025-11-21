@@ -12,5 +12,12 @@
             "current_status": "QA",
             "last_updated": "2025-11-21"
         }
+        ,
+        {
+            "id": "sample-article-004",
+            "title": "SC-900:Introduction",
+            "current_status": "Approval",
+            "last_updated": "2025-11-21"
+        }
     ]
 }
