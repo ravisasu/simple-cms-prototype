@@ -1,0 +1,13 @@
+Commands:
+
+python scripts/update_status.py sample-article-001 QA
+
+python scripts/workflow_transition.py sample-article-001 Published
+
+#Python Script Command
+python .\scripts\add_article.py sample-article-006 "My Title" --dry-run
+
+
+
+# Use python or py depending on your environment append a file
+python .\scripts\check_status_consistency.py --fix

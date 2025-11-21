@@ -1,0 +1,28 @@
+name: Check content status consistency
+
+on:
+  pull_request:
+
+jobs:
+  check-status:
+    name: Run consistency checker
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Run consistency checker
+        run: |
+          python scripts/check_status_consistency.py
+
+      - name: Guidance on failure
+        if: ${{ failure() }}
+        run: |
+          echo "content_status.json inconsistency detected."
+          echo "Run: python ./scripts/check_status_consistency.py --fix to auto-add missing entries (or fix manually)."

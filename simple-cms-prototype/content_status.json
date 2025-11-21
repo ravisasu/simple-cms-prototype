@@ -1,0 +1,28 @@
+{
+    "articles": [
+        {
+            "id": "sample-article-001",
+            "title": "Using Git as a Mini CMS Workflow",
+            "current_status": "Published",
+            "last_updated": "2025-11-21"
+        },
+        {
+            "id": "sample-article-002",
+            "title": "SC-200: Introduction",
+            "current_status": "Published",
+            "last_updated": "2025-11-21"
+        },
+        {
+            "id": "sample-article-003",
+            "title": "Title:",
+            "current_status": "Draft",
+            "last_updated": "2025-11-21"
+        },
+        {
+            "id": "sample-article-004",
+            "title": "Title:",
+            "current_status": "QA",
+            "last_updated": "2025-11-21"
+        }
+    ]
+}
