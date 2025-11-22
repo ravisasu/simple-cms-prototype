@@ -26,7 +26,7 @@ This file provides a one-sentence explanation, an example command, and a brief u
 
 - `install_precommit_hook.ps1`
   - Explanation: PowerShell script that installs a Git pre-commit hook for local linting and validation.
-  - Example: `.	emplates\scripts\install_precommit_hook.ps1` (run from repo root)
+  - Example: `. emplates\scripts\install_precommit_hook.ps1` (run from repo root)
   - Usage: Run once per developer environment to add local pre-commit checks.
 
 - `markdown_to_pdf.py`
