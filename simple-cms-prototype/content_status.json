@@ -22,7 +22,7 @@
         },
         {
             "id": "azure-ai-101",
-            "title": "Azure AI Foundations — Overview",
+            "title": "Azure AI Foundations \u2014 Overview",
             "current_status": "Draft",
             "course": "Azure-AI-Foundations",
             "module": "Module-01",
@@ -32,7 +32,7 @@
         },
         {
             "id": "ms-dynamics-101",
-            "title": "Microsoft Dynamics — Intro",
+            "title": "Microsoft Dynamics \u2014 Intro",
             "current_status": "Draft",
             "course": "Microsoft-Dynamics",
             "module": "Module-01",
@@ -42,12 +42,12 @@
         },
         {
             "id": "course-micrsoft-powerplatform-001",
-            "title": "Microsoft Powerplatforms — Overview",
-            "current_status": "Draft",
+            "title": "Microsoft Powerplatforms \u2014 Overview",
+            "current_status": "Published",
             "course": "Microsoft-Powerplatforms",
             "module": null,
             "authors": "[\"Course Lead\"]",
-            "path": "Content/articles/Microsoft-Powerplatforms/Module-01/Powerplatforms-Course Overview.md",
+            "path": "Content/Published/Powerplatforms-Course Overview.md",
             "last_updated": "2025-11-22"
         },
         {

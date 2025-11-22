@@ -88,7 +88,14 @@ def ensure_published_dir():
     return candidates[0]
 
 for article in data.get("articles", []):
-    if article.get("id") == article_id or article.get("id") == article_arg:
+    # Match by ID, filename (with or without .md), or path basename
+    article_path = article.get("path", "")
+    article_filename = os.path.basename(article_path) if article_path else ""
+    
+    if (article.get("id") == article_id or 
+        article.get("id") == article_arg or
+        article_filename == article_md or
+        article_filename == article_arg):
         found = True
         # If stage is Approved we treat it as approval trigger: record approval, then publish
         if stage == 'Approved':
@@ -145,9 +152,9 @@ for article in data.get("articles", []):
                             new_lines.append('status: "Published"')
                         # append approval audit fields into frontmatter if present
                         if article.get('approved_by'):
-                            new_lines.append(f'approved_by: "{article.get(\'approved_by\')}"')
+                            new_lines.append(f'approved_by: "{article.get("approved_by")}"')
                         if article.get('approved_at'):
-                            new_lines.append(f'approved_at: "{article.get(\'approved_at\')}"')
+                            new_lines.append(f'approved_at: "{article.get("approved_at")}"')
                         new_fm = '\n'.join(new_lines)
                         new_content = '---\n' + new_fm + '\n---' + body
                         with open(dest_path, 'w', encoding='utf-8') as f:

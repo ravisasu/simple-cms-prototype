@@ -2,7 +2,7 @@
 id: "course-micrsoft-powerplatform-001"
 title: "Microsoft Powerplatforms — Overview"
 course: "Microsoft-Powerplatforms"
-status: "Draft"
+status: "Published"
 authors: ["Course Lead"]
 last_updated: "2025-11-22"
 ---
