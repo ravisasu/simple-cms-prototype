@@ -1,53 +1,96 @@
 {
-  "version": "2.0.0",
-  "tasks": [
-    {
-      "label": "Check content consistency (fix)",
-      "type": "shell",
-      "command": "python .\\scripts\\check_status_consistency.py --fix",
-      "presentation": {
-        "echo": true,
-        "reveal": "always",
-        "panel": "shared"
-      },
-      "problemMatcher": []
-    },
-    {
-      "label": "Regenerate content_status.json from frontmatter",
-      "type": "shell",
-      "command": "python .\\scripts\\convert_frontmatter_to_json.py",
-      "presentation": {
-        "echo": true,
-        "reveal": "always",
-        "panel": "shared"
-      },
-      "problemMatcher": []
-    },
-    {
-      "label": "Run workflow transition (example)",
-      "type": "shell",
-      "command": "python .\\scripts\\workflow_transition.py ${input:articleId} ${input:status}",
-      "presentation": {
-        "echo": true,
-        "reveal": "always",
-        "panel": "shared"
-      },
-      "problemMatcher": []
-    }
-  ],
-  "inputs": [
-    {
-      "id": "articleId",
-      "type": "promptString",
-      "description": "Article id (filename without .md)",
-      "default": "sample-article-001"
-    },
-    {
-      "id": "status",
-      "type": "pickString",
-      "description": "Target status for workflow transition",
-      "options": ["Draft","Review","Approval","Published"],
-      "default": "Published"
-    }
-  ]
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Check content consistency (fix)",
+            "type": "shell",
+            "command": "python .\\scripts\\check_status_consistency.py --fix",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Regenerate content_status.json from frontmatter",
+            "type": "shell",
+            "command": "python .\\scripts\\convert_frontmatter_to_json.py",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Run workflow transition (example)",
+            "type": "shell",
+            "command": "python .\\scripts\\workflow_transition.py ${input:articleId} ${input:status}",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        }
+        ,
+        {
+            "label": "Create lesson from template",
+            "type": "shell",
+            "command": "python .\\scripts\\create_lesson.py \"${input:lessonTitle}\" --course \"${input:course}\" --module \"${input:module}\" ${input:opts}",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        }
+    ],
+    "inputs": [
+        {
+            "id": "articleId",
+            "type": "promptString",
+            "description": "Article id (filename without .md)",
+            "default": "sample-article-001"
+        },
+        {
+            "id": "status",
+            "type": "pickString",
+            "description": "Target status for workflow transition",
+            "options": [
+                "Draft",
+                "Review",
+                "Approval",
+                "Published"
+            ],
+            "default": "Published"
+        }
+        ,
+        {
+            "id": "lessonTitle",
+            "type": "promptString",
+            "description": "Lesson title (will be slugified)",
+            "default": "New Lesson Title"
+        },
+        {
+            "id": "course",
+            "type": "promptString",
+            "description": "Course folder name",
+            "default": "Microsoft-Security"
+        },
+        {
+            "id": "module",
+            "type": "promptString",
+            "description": "Module folder name",
+            "default": "Module-01"
+        },
+        {
+            "id": "opts",
+            "type": "pickString",
+            "description": "Extra options (e.g. --open or --run-check)",
+            "options": ["","--open","--run-check","--open --run-check"],
+            "default": ""
+        }
+    ]
 }
