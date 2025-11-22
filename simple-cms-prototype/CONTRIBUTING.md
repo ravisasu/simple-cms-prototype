@@ -51,6 +51,18 @@ PR checklist for authors
 - Add a short description of what changed and which module/course the change affects.
 - Request a reviewer and wait for CI checks to pass.
 
+VS Code setup (recommended for authors)
+
+- Open this repository folder in VS Code. The workspace recommends extensions (see `.vscode/extensions.json`) for YAML, Markdown linting and Live Share.
+- Recommended extensions: `redhat.vscode-yaml`, `yzhang.markdown-all-in-one`, `DavidAnson.vscode-markdownlint`, `ms-vsliveshare.vsliveshare`, `esbenp.prettier-vscode`.
+- The workspace includes `.vscode/settings.json` with sensible defaults (trim trailing whitespace, format on save, YAML validation). Use Live Share for pair-editing and walkthroughs.
+
+You can run the consistency checker from the Terminal in VS Code:
+
+```powershell
+python .\scripts\check_status_consistency.py --fix
+```
+
 If you need to regenerate `content_status.json` from files (migration step):
 
 ```powershell
