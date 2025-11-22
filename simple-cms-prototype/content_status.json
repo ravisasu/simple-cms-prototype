@@ -1,23 +1,64 @@
 {
     "articles": [
         {
-            "id": "sample-article-002",
-            "title": "SC-200: Introduction",
-            "current_status": "Published",
-            "last_updated": "2025-11-21"
+            "id": "azure-ai-101",
+            "title": "Azure AI Foundations — Overview",
+            "current_status": "Draft",
+            "course": "Azure-AI-Foundations",
+            "module": "Module-01",
+            "authors": "[\"Course Team\"]",
+            "path": "Content/Azure-AI-Foundations/Module-01/azure-ai-101.md",
+            "last_updated": "2025-11-22"
         },
         {
-            "id": "sample-article-003",
-            "title": "Title:",
-            "current_status": "QA",
-            "last_updated": "2025-11-21"
-        }
-        ,
+            "id": "ms-dynamics-101",
+            "title": "Microsoft Dynamics — Intro",
+            "current_status": "Draft",
+            "course": "Microsoft-Dynamics",
+            "module": "Module-01",
+            "authors": "[\"Course Team\"]",
+            "path": "Content/Microsoft-Dynamics/Module-01/ms-dynamics-101.md",
+            "last_updated": "2025-11-22"
+        },
         {
-            "id": "sample-article-004",
-            "title": "SC-900:Introduction",
-            "current_status": "Approval",
-            "last_updated": "2025-11-21"
+            "id": "course-000-lesson-001",
+            "title": "Lesson title here",
+            "current_status": "Draft\" # Draft | Review | Approval | Published",
+            "course": "Microsoft-Security",
+            "module": "Module-01",
+            "authors": "[\"Your Name\"]",
+            "path": "Content/Microsoft-Security/Module-01/ms-security-001.md",
+            "last_updated": "2025-11-22"
+        },
+        {
+            "id": "ms-security-101",
+            "title": "Introduction to Microsoft Security",
+            "current_status": "Draft",
+            "course": "Microsoft-Security",
+            "module": "Module-01",
+            "authors": "[\"Course Team\"]",
+            "path": "Content/Microsoft-Security/Module-01/ms-security-101.md",
+            "last_updated": "2025-11-22"
+        },
+        {
+            "id": "intro-to-microsoft-security",
+            "title": "Intro to Microsoft Security",
+            "current_status": "Published",
+            "course": "Microsoft-Security",
+            "module": "Module-01",
+            "authors": "[]",
+            "path": "Content/Published/intro-to-microsoft-security.md",
+            "last_updated": "2025-11-22"
+        },
+        {
+            "id": "sample-article-001",
+            "title": "sample-article-001",
+            "current_status": "Draft",
+            "course": null,
+            "module": null,
+            "authors": [],
+            "path": "Content/Published/sample-article-001.md",
+            "last_updated": "2025-11-22"
         }
     ]
 }

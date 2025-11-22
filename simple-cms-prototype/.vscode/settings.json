@@ -1,25 +1,32 @@
 {
-  "files.trimTrailingWhitespace": true,
-  "files.insertFinalNewline": true,
-  "files.exclude": {
-    "**/.git": true,
-    "**/.DS_Store": true
-  },
-  "editor.formatOnSave": true,
-  "editor.rulers": [80, 120],
-  "yaml.validate": true,
-  "yaml.schemas": {
-    "file:///schemas/frontmatter-schema.json": "**/*.md"
-  },
-  "markdownlint.config": {
-    "default": true
-  },
-  "[markdown]": {
-    "editor.wordWrap": "on",
-    "editor.quickSuggestions": true
-  },
-  "terminal.integrated.shell.windows": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
-  "files.associations": {
-    "*.md": "markdown"
-  }
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "files.exclude": {
+        "**/.git": true,
+        "**/.DS_Store": true
+    },
+    "editor.formatOnSave": true,
+    "editor.rulers": [
+        80,
+        120
+    ],
+    "yaml.validate": true,
+    "yaml.schemas": {
+        "file:///schemas/frontmatter-schema.json": "**/*.md"
+    },
+    "markdownlint.config": {
+        "default": true
+    },
+    "[markdown]": {
+        "editor.wordWrap": "on",
+        "editor.quickSuggestions": {
+            "comments": "on",
+            "strings": "on",
+            "other": "on"
+        }
+    },
+    "terminal.integrated.shell.windows": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "files.associations": {
+        "*.md": "markdown"
+    }
 }

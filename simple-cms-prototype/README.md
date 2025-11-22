@@ -13,9 +13,7 @@ This repository contains helper scripts to manage article files and their lifecy
 - `scripts/install_precommit_hook.ps1`: PowerShell helper to install a Git pre-commit hook that runs the consistency checker before commits.
 - `scripts/sync_status.py`: Update an article's `current_status` in both `content_status.json` and the article's markdown `# Status:` header.
 - `scripts/move_to_stage.py`: Move an article file to a named stage folder (e.g. `Approval`) and update its status in `content_status.json`.
-- `scripts/move_to_published.py`: (empty placeholder) Intended place for a standalone mover to publish articles.
-- `scripts/publish_article.py`: Simple script to move an article from `content/articles` to `content/published`.
-- `scripts/workflow_transition.py`: Update an article's status in JSON and (when set to `Published`) move the file to the published folder; includes folder-name fallbacks.
+- `scripts/workflow_transition.py`: Update an article's status in JSON. If a lesson is marked `Approved` (or `Published`) the script will move the file into the `Published` folder and update `content_status.json` accordingly. This keeps metadata consistent and avoids needing separate stage folders for Draft/Review/Approved.
 
 ## Examples (PowerShell)
 

@@ -1,9 +1,9 @@
 {
-  "recommendations": [
-    "redhat.vscode-yaml",
-    "yzhang.markdown-all-in-one",
-    "DavidAnson.vscode-markdownlint",
-    "ms-vsliveshare.vsliveshare",
-    "esbenp.prettier-vscode"
-  ]
+    "recommendations": [
+        "redhat.vscode-yaml",
+        "yzhang.markdown-all-in-one",
+        "DavidAnson.vscode-markdownlint",
+        "ms-vsliveshare.vsliveshare",
+        "esbenp.prettier-vscode"
+    ]
 }

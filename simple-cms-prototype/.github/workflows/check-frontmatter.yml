@@ -31,7 +31,7 @@ jobs:
       - name: Markdown lint (markdownlint-action)
         uses: igorshubovych/markdownlint-action@v4
         with:
-          files: '**/*.md'
+          files: "**/*.md"
 
       - name: Link check (lychee)
         uses: lycheeverse/lychee-action@v1
