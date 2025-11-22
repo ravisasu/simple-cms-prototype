@@ -3,6 +3,7 @@
 One-page guide for authors to create, validate, collaborate, and publish lessons.
 
 1) Open repository in VS Code
+
 - File → Open Folder → select repository root.
 - Accept recommended extensions (YAML, Markdown, markdownlint, Live Share).
 
@@ -22,6 +23,7 @@ code Content\Microsoft-Security\Module-01\my-lesson-001.md
 ```
 
 3) Edit frontmatter and content
+
 - Update YAML frontmatter fields: `id`, `title`, `course`, `module`, `status` (Draft | Review | Approved | Published), `authors`.
 - Save frequently. Use Live Share for pair editing.
 
@@ -32,6 +34,7 @@ python .\scripts\check_status_consistency.py --fix
 ```
 
 5) When ready for review
+
 - Update frontmatter to `status: "Review"` and push a branch or invite reviewers via Live Share.
 
 6) Approve and publish
@@ -54,6 +57,7 @@ git push --set-upstream origin demo/<your-branch>
 ```
 
 Notes
+
 - Use branches for parallel work or Live Share for real-time collaboration.
 - If the checker reports parse errors, install `pyyaml` in the environment used by `python`:
 

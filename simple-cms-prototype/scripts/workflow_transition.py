@@ -22,6 +22,16 @@ Behavior:
 article_arg = sys.argv[1]
 stage_raw = sys.argv[2]
 
+# Optional approver: support `--by <approver>` to record who approved the article
+approver = None
+if '--by' in sys.argv:
+    try:
+        idx = sys.argv.index('--by')
+        if len(sys.argv) > idx + 1:
+            approver = sys.argv[idx + 1]
+    except Exception:
+        approver = None
+
 json_file = "content_status.json"
 article_id = os.path.splitext(article_arg)[0]
 article_md = f"{article_id}.md"
@@ -88,6 +98,11 @@ for article in data.get("articles", []):
             # set last_updated now
             article['last_updated'] = str(datetime.now().date())
 
+            # record approval audit fields
+            if approver:
+                article['approved_by'] = approver
+            article['approved_at'] = datetime.now().isoformat()
+
             # find source file and move to published folder
             src_path = find_source_path(article_md)
             if not src_path:
@@ -128,6 +143,11 @@ for article in data.get("articles", []):
                                 new_lines.append(line)
                         if not updated:
                             new_lines.append('status: "Published"')
+                        # append approval audit fields into frontmatter if present
+                        if article.get('approved_by'):
+                            new_lines.append(f'approved_by: "{article.get(\'approved_by\')}"')
+                        if article.get('approved_at'):
+                            new_lines.append(f'approved_at: "{article.get(\'approved_at\')}"')
                         new_fm = '\n'.join(new_lines)
                         new_content = '---\n' + new_fm + '\n---' + body
                         with open(dest_path, 'w', encoding='utf-8') as f:

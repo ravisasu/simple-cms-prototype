@@ -3,6 +3,7 @@
 This release snapshot packages the demo-ready materials used for the Guided Hands-On and Quick Demo presentations.
 
 Included demo materials
+
 - `Author-QuickStart.md` — one-page copyable commands for authors.
 - `Demo-cheatsheet.md` — short checklist and commands for attendees.
 - `Presenter-Script.md` — timed speaker notes for the Guided Hands-On session.
@@ -29,4 +30,5 @@ Guided Hands-On (recommended)
 Follow `Presenter-Script.md` and use `auto_demo_runner.ps1` to run a rehearsal. The `Demo-cheatsheet.md` is ideal as a handout for attendees.
 
 Release tag
+
 - This snapshot is tagged `demo-guided-2025-11-22`.
