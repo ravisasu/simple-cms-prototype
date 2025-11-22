@@ -1,0 +1,53 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Check content consistency (fix)",
+      "type": "shell",
+      "command": "python .\\scripts\\check_status_consistency.py --fix",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Regenerate content_status.json from frontmatter",
+      "type": "shell",
+      "command": "python .\\scripts\\convert_frontmatter_to_json.py",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Run workflow transition (example)",
+      "type": "shell",
+      "command": "python .\\scripts\\workflow_transition.py ${input:articleId} ${input:status}",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    }
+  ],
+  "inputs": [
+    {
+      "id": "articleId",
+      "type": "promptString",
+      "description": "Article id (filename without .md)",
+      "default": "sample-article-001"
+    },
+    {
+      "id": "status",
+      "type": "pickString",
+      "description": "Target status for workflow transition",
+      "options": ["Draft","Review","Approval","Published"],
+      "default": "Published"
+    }
+  ]
+}
