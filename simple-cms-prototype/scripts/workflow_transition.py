@@ -98,6 +98,8 @@ for article in data.get("articles", []):
             try:
                 shutil.move(src_path, dest_path)
                 print(f"Article moved to published folder: {dest_path}")
+                # update JSON path to point to the new location
+                article['path'] = dest_path.replace('\\', '/')
             except Exception as e:
                 print(f"Failed to move file: {e}")
                 break
@@ -149,6 +151,7 @@ for article in data.get("articles", []):
                 try:
                     shutil.move(src_path, dest_path)
                     print(f"Article moved to published folder: {dest_path}")
+                    article['path'] = dest_path.replace('\\', '/')
                 except Exception as e:
                     print(f"Failed to move file: {e}")
                     break

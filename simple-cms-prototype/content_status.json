@@ -32,7 +32,7 @@
         },
         {
             "id": "azure-ai-101",
-            "title": "Azure AI Foundations — Overview",
+            "title": "Azure AI Foundations \u2014 Overview",
             "current_status": "Draft",
             "course": "Azure-AI-Foundations",
             "module": "Module-01",
@@ -44,7 +44,7 @@
         },
         {
             "id": "ms-dynamics-101",
-            "title": "Microsoft Dynamics — Intro",
+            "title": "Microsoft Dynamics \u2014 Intro",
             "current_status": "Draft",
             "course": "Microsoft-Dynamics",
             "module": "Module-01",
@@ -57,12 +57,13 @@
         {
             "id": "intro-to-microsoft-security",
             "title": "Intro to Microsoft Security",
-            "current_status": "Draft",
+            "current_status": "Published",
             "course": "Microsoft-Security",
             "module": "Module-01",
             "authors": [],
             "path": "Content/Microsoft-Security/Module-01/intro-to-microsoft-security.md",
-            "last_updated": "2025-11-22"
+            "last_updated": "2025-11-22",
+            "previous_status": "Draft"
         },
         {
             "id": "course-000-lesson-001",
