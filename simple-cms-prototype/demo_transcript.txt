@@ -1,0 +1,28 @@
+Terminal transcript: creating demo branch, scaffolding lesson, and running checker
+
+Commands executed:
+Set-Location to repository root
+git checkout -b demo/guided-2025-11-22
+python .\scripts\create_lesson.py "Intro to Microsoft Security" --course Microsoft-Security --module Module-01 --run-check
+git add Content\Microsoft-Security\Module-01\*.md content_status.json
+git commit -m "Demo: add intro-to-microsoft-security lesson"
+git push --set-upstream origin demo/guided-2025-11-22
+
+Output excerpt:
+Switched to a new branch 'demo/guided-2025-11-22'
+Created: Content\Microsoft-Security\Module-01\intro-to-microsoft-security.md
+Mismatches detected:
+ - azure-ai-101: missing in JSON (file: Content/Azure-AI-Foundations/Module-01/azure-ai-101.md)
+ - ms-dynamics-101: missing in JSON (file: Content/Microsoft-Dynamics/Module-01/ms-dynamics-101.md)
+ - intro-to-microsoft-security: missing in JSON (file: Content/Microsoft-Security/Module-01/intro-to-microsoft-security.md)
+Applying fixes to JSON from frontmatter...
+Wrote 10 entries to content_status.json
+[demo/guided-2025-11-22 0871146] Demo: add intro-to-microsoft-security lesson
+create mode 100644 .../intro-to-microsoft-security.md
+create mode 100644 .../ms-security-001.md
+To https://github.com/ravisasu/simple-cms-prototype.git
+ * [new branch]      demo/guided-2025-11-22 -> demo/guided-2025-11-22
+
+Notes:
+- The checker auto-fixed missing/changed entries and updated `content_status.json`.
+- A PR can be created at: https://github.com/ravisasu/simple-cms-prototype/pull/new/demo/guided-2025-11-22
