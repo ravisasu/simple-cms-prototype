@@ -1,1 +1,5 @@
-pyyaml>=6.0,<7
+PyYAML==6.0.3
+Markdown==3.10
+xhtml2pdf==0.2.17
+reportlab==4.4.5
+Pillow==12.0.0
