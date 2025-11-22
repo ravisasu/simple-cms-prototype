@@ -28,6 +28,16 @@ jobs:
         run: |
           python scripts/check_status_consistency.py --strict
 
+      - name: Markdown lint (markdownlint-action)
+        uses: igorshubovych/markdownlint-action@v4
+        with:
+          files: '**/*.md'
+
+      - name: Link check (lychee)
+        uses: lycheeverse/lychee-action@v1
+        with:
+          args: --no-progress --filter "\.md$"
+
       - name: Show content_status.json (debug)
         run: |
           echo '--- content_status.json ---'
