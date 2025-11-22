@@ -44,25 +44,10 @@ This file provides a one-sentence explanation, an example command, and a brief u
   - Example: `python scripts/move_to_stage.py Content/X/Module-01/foo.md Published`
   - Usage: Run to manually change an article's folder stage and sync its path/status in the index.
 
-- `publish_article.py`
-  - Explanation: High-level wrapper that marks an article as published and triggers configured publish-time updates (e.g., metadata changes).
-  - Example: `python scripts/publish_article.py intro-to-microsoft-security`
-  - Usage: Use to mark a slug as published; it may call the mover or workflow script under the hood.
-
-- `sync_status.py`
-  - Explanation: Synchronizes the `status` field between a single markdown file's frontmatter and the `content_status.json` entry.
-  - Example: `python scripts/sync_status.py Content/Microsoft-Security/Module-01/foo.md`
-  - Usage: Handy for correcting or pushing a single file's status into the index or updating the file from the index.
-
-- `update_status.py`
-  - Explanation: CLI utility to update an article's status in `content_status.json` (and optionally its frontmatter).
-  - Example: `python scripts/update_status.py intro-to-microsoft-security Approved --frontmatter`
-  - Usage: Use when you need to change the status value programmatically; add `--frontmatter` to write it back into the file.
-
 - `workflow_transition.py`
-  - Explanation: Implements workflow rules (normalizes stage names) and triggers publish actions (moves file to Published on Approved and updates JSON/frontmatter).
-  - Example: `python scripts/workflow_transition.py intro-to-microsoft-security Approved`
-  - Usage: Preferred entrypoint for scripted status transitions that may need to move files and update audit fields.
+  - Explanation: Implements workflow rules (normalizes stage names) and triggers publish actions (moves file to Published on Approved and updates JSON/frontmatter with approval audit fields).
+  - Example: `python scripts/workflow_transition.py intro-to-microsoft-security Approved --by "John Doe"`
+  - Usage: **Primary entrypoint** for status transitions — handles normalization, file moves, and metadata updates; supports `--by <approver>` to record who approved.
 
 ---
 
