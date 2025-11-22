@@ -3,6 +3,7 @@
 Goal: show SMEs and authors how to create and validate a lesson using VS Code, templates, frontmatter, and the repository tooling.
 
 Prerequisites
+
 - Clone the repository and open the folder in VS Code.
 - Have Python available on your PATH. On Windows, use PowerShell.
 - (Optional) Install `pyyaml` for richer frontmatter parsing:
@@ -75,10 +76,12 @@ git push --set-upstream origin draft/your-branch
 ```
 
 Troubleshooting
+
 - If the checker prints parsing warnings and you installed `pyyaml`, ensure `python` on PATH is the same interpreter used to install packages.
 - If the Live Share extension requires sign-in, follow the extension prompts.
 
 Short demo script (speaker notes)
+
 - 0:00 — Open folder in VS Code, accept recommended extensions.
 - 0:20 — Copy the lesson template to a course/module, open file.
 - 0:45 — Edit frontmatter `id/title/status` and save.
