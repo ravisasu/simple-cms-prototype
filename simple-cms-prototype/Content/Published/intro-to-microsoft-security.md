@@ -1,9 +1,10 @@
 ---
+
 id: "intro-to-microsoft-security"
 title: "Intro to Microsoft Security"
 course: "Microsoft-Security"
 module: "Module-01"
-status: "Draft"
+status: "Published"
 authors: []
 last_updated: "2025-11-22"
 ---
