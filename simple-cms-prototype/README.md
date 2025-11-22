@@ -1,3 +1,5 @@
+[![CI](https://github.com/ravisasu/simple-cms-prototype/actions/workflows/check-frontmatter.yml/badge.svg)](https://github.com/ravisasu/simple-cms-prototype/actions/workflows/check-frontmatter.yml)
+
 Project scripts overview
 
 This repository contains helper scripts to manage article files and their lifecycle status. Below are one-line descriptions for each script and concrete PowerShell examples you can run from the repository root.
@@ -12,7 +14,6 @@ This repository contains helper scripts to manage article files and their lifecy
 - `scripts/move_to_published.py`: (empty placeholder) Intended place for a standalone mover to publish articles.
 - `scripts/publish_article.py`: Simple script to move an article from `content/articles` to `content/published`.
 - `scripts/workflow_transition.py`: Update an article's status in JSON and (when set to `Published`) move the file to the published folder; includes folder-name fallbacks.
-
 
 ## Examples (PowerShell)
 
