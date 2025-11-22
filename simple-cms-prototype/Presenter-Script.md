@@ -4,10 +4,12 @@ Audience: content authors and SMEs
 Duration: 10–15 minutes (guided, interactive)
 
 Overview
+
 - Quickly explain the frontmatter-first policy and why `content_status.json` is derived from each markdown file.
 - Show how to scaffold a lesson, edit frontmatter, validate, collaborate with Live Share, and create a PR to run CI.
 
 Timing & script
+
 - 0:00 — Intro (20s)
   - Say: “We treat YAML frontmatter as the canonical metadata for each lesson. Our tools validate and keep `content_status.json` in sync.”
 
@@ -32,8 +34,10 @@ Timing & script
   - Say: “The PR runs CI checks — frontmatter validation, markdownlint and link-checking.”
 
 Troubleshooting lines to read
+
 - If the checker prints parse warnings: “Install `pyyaml` in the Python environment used by the repository. Make sure the `python` on PATH matches where you installed packages.”
 - If the PR CI fails with markdownlint: “We put a minimal `.markdownlint.json` in the repo — we can adjust rules if you prefer different style constraints.”
 
 Closing (10s)
+
 - Remind the group where templates and CONTRIBUTING docs live and offer the cheat-sheet for participants: `Demo-cheatsheet.md`.

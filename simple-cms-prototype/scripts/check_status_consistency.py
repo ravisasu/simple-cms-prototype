@@ -108,6 +108,24 @@ def build_index_from_frontmatter(md_paths):
         aid = fm.get('id') or filename
         title = fm.get('title') or fm.get('Title') or filename
         status = fm.get('status') or fm.get('current_status') or 'Draft'
+        # Normalize common status synonyms to canonical values
+        def normalize_status(s):
+            if not s:
+                return 'Draft'
+            s_norm = str(s).strip()
+            mapping = {
+                'qa': 'Review',
+                'quality assurance': 'Review',
+                'approval': 'Approved',
+                'approved': 'Approved',
+                'review': 'Review',
+                'draft': 'Draft',
+                'published': 'Published'
+            }
+            low = s_norm.lower()
+            return mapping.get(low, s_norm)
+
+        status = normalize_status(status)
         course = fm.get('course')
         module = fm.get('module')
         authors = fm.get('authors') or fm.get('author') or []

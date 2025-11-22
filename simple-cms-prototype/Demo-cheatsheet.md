@@ -3,6 +3,7 @@
 One-page checklist and copyable commands to run the Guided Hands-On demo.
 
 Quick checklist
+
 - Open the repository root in VS Code and accept recommended extensions.
 - Scaffold a lesson with `create_lesson.py` or copy the template into `Content`.
 - Edit YAML frontmatter: `id`, `title`, `course`, `module`, `status`, `authors`.
@@ -32,6 +33,7 @@ git push --set-upstream origin demo/your-branch
 ```
 
 Speaker notes (short)
+
 - 0:00 — Open folder; accept recommended extensions.
 - 0:20 — Scaffold or copy the template and open file.
 - 0:45 — Edit frontmatter and save.

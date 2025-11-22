@@ -4,7 +4,7 @@ This file explains recommended settings and a simple checklist to record the dem
 
 Quick checklist
 
-- Install OBS Studio (https://obsproject.com/) or use Win+G to capture.
+- Install OBS Studio (<https://obsproject.com/>) or use Win+G to capture.
 - Use a quiet room and a headset mic for clear audio.
 - Record at 1920x1080 (30 or 60 fps) and 30–40 Mbps bitrate for good quality.
 

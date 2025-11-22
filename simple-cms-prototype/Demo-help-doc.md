@@ -32,7 +32,7 @@ code Content\Microsoft-Security\Module-01\ms-security-001.md
 
 3. Edit the frontmatter and content
 
-- At the top of the file, update YAML frontmatter fields: `id`, `title`, `course`, `module`, `status` (Draft | Review | Approval | Published), and `authors`.
+- At the top of the file, update YAML frontmatter fields: `id`, `title`, `course`, `module`, `status` (Draft | Review | Approved | Published), and `authors`.
 - Save the file.
 
 Example frontmatter (already in the template):
