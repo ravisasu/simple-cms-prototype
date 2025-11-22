@@ -1,69 +1,24 @@
 {
     "articles": [
         {
-            "id": "sample-article-002",
-            "title": "sample-article-002",
-            "current_status": "Draft",
-            "course": null,
-            "module": null,
-            "authors": [],
-            "path": "Content/articles/sample-article-002.md",
-            "last_updated": "2025-11-22"
-        },
-        {
-            "id": "sample-article-003",
-            "title": "sample-article-003",
-            "current_status": "Draft",
-            "course": null,
-            "module": null,
-            "authors": [],
-            "path": "Content/articles/sample-article-003.md",
-            "last_updated": "2025-11-22"
-        },
-        {
-            "id": "sample-article-004",
-            "title": "sample-article-004",
-            "current_status": "Draft",
-            "course": null,
-            "module": null,
-            "authors": [],
-            "path": "Content/articles/Approval/sample-article-004.md",
-            "last_updated": "2025-11-22"
-        },
-        {
             "id": "azure-ai-101",
-            "title": "Azure AI Foundations \u2014 Overview",
+            "title": "Azure AI Foundations — Overview",
             "current_status": "Draft",
             "course": "Azure-AI-Foundations",
             "module": "Module-01",
-            "authors": [
-                "Course Team"
-            ],
+            "authors": "[\"Course Team\"]",
             "path": "Content/Azure-AI-Foundations/Module-01/azure-ai-101.md",
             "last_updated": "2025-11-22"
         },
         {
             "id": "ms-dynamics-101",
-            "title": "Microsoft Dynamics \u2014 Intro",
+            "title": "Microsoft Dynamics — Intro",
             "current_status": "Draft",
             "course": "Microsoft-Dynamics",
             "module": "Module-01",
-            "authors": [
-                "Course Team"
-            ],
+            "authors": "[\"Course Team\"]",
             "path": "Content/Microsoft-Dynamics/Module-01/ms-dynamics-101.md",
             "last_updated": "2025-11-22"
-        },
-        {
-            "id": "intro-to-microsoft-security",
-            "title": "Intro to Microsoft Security",
-            "current_status": "Published",
-            "course": "Microsoft-Security",
-            "module": "Module-01",
-            "authors": [],
-            "path": "Content/Microsoft-Security/Module-01/intro-to-microsoft-security.md",
-            "last_updated": "2025-11-22",
-            "previous_status": "Draft"
         },
         {
             "id": "course-000-lesson-001",
@@ -71,9 +26,7 @@
             "current_status": "Draft\" # Draft | Review | Approval | Published",
             "course": "Microsoft-Security",
             "module": "Module-01",
-            "authors": [
-                "Your Name"
-            ],
+            "authors": "[\"Your Name\"]",
             "path": "Content/Microsoft-Security/Module-01/ms-security-001.md",
             "last_updated": "2025-11-22"
         },
@@ -83,10 +36,18 @@
             "current_status": "Draft",
             "course": "Microsoft-Security",
             "module": "Module-01",
-            "authors": [
-                "Course Team"
-            ],
+            "authors": "[\"Course Team\"]",
             "path": "Content/Microsoft-Security/Module-01/ms-security-101.md",
+            "last_updated": "2025-11-22"
+        },
+        {
+            "id": "intro-to-microsoft-security",
+            "title": "Intro to Microsoft Security",
+            "current_status": "Published",
+            "course": "Microsoft-Security",
+            "module": "Module-01",
+            "authors": "[]",
+            "path": "Content/Published/intro-to-microsoft-security.md",
             "last_updated": "2025-11-22"
         },
         {
@@ -97,16 +58,6 @@
             "module": null,
             "authors": [],
             "path": "Content/Published/sample-article-001.md",
-            "last_updated": "2025-11-22"
-        },
-        {
-            "id": "sample-article-005",
-            "title": "sample-article-005",
-            "current_status": "Draft",
-            "course": null,
-            "module": null,
-            "authors": [],
-            "path": "Content/articles/Draft/sample-article-005.md",
             "last_updated": "2025-11-22"
         }
     ]
