@@ -7,14 +7,15 @@ forwards the call to `sync_status.py`.
 """
 import sys
 import subprocess
-import os
+import sys
 
-if len(sys.argv) < 3:
-    print("Usage: python scripts/update_status.py <article_id> <new_status>")
-    sys.exit(1)
+def main():
+    print("Deprecated: 'update_status.py' has been retired. Use 'scripts/workflow_transition.py <slug> <stage>' instead.")
+    print("No action taken.")
+    return 0
 
-# Forward to sync_status.py for unified behavior
-args = [sys.executable, os.path.join(os.path.dirname(__file__), "sync_status.py")] + sys.argv[1:]
+if __name__ == '__main__':
+    sys.exit(main())
 try:
     rc = subprocess.call(args)
     sys.exit(rc)
