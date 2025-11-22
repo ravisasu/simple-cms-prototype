@@ -11,8 +11,8 @@ This repository contains helper scripts to manage article files and their lifecy
 - `scripts/move_to_stage.py`: Move an article file to a named stage folder (e.g. `Approval`) and update its status in `content_status.json`.
 - `scripts/move_to_published.py`: (empty placeholder) Intended place for a standalone mover to publish articles.
 - `scripts/publish_article.py`: Simple script to move an article from `content/articles` to `content/published`.
-- `scripts/update_status.py`: (deprecated) Wrapper maintained for compatibility; forwards to `scripts/sync_status.py`.
 - `scripts/workflow_transition.py`: Update an article's status in JSON and (when set to `Published`) move the file to the published folder; includes folder-name fallbacks.
+
 
 ## Examples (PowerShell)
 
@@ -79,6 +79,6 @@ git push
 
 - Scripts assume `Content/articles` (or `content/articles`) as the article source. They include fallbacks for common folder name variants on Windows.
 - The pre-commit hook runs `check_status_consistency.py` and will abort commits when mismatches are detected.
-- If you prefer metadata inside each markdown file (YAML frontmatter) as the single source-of-truth, I can implement a sync that derives `content_status.json` from frontmatter instead.
+- Frontmatter-first: This repository now treats YAML frontmatter in each markdown file as the canonical source-of-truth for metadata. Use `CONTRIBUTING.md` and the files in `Templates/` for onboarding and examples.
 
-If you want, I can also commit this README update for you.
+If you want, I can commit these changes (README, templates, CONTRIBUTING, migration scripts) and push them to `origin/main` for you.
