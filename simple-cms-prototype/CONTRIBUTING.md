@@ -4,7 +4,6 @@ This project uses YAML frontmatter in each markdown file as the canonical source
 of metadata (id, title, status, authors, course, module, last_updated). The
 repository includes scripts to help create, validate, and migrate metadata.
 
-
 Quick start (authoring a new lesson)
 
 1. Create a branch from `main`:
@@ -62,6 +61,19 @@ You can run the consistency checker from the Terminal in VS Code:
 ```powershell
 python .\scripts\check_status_consistency.py --fix
 ```
+
+Running VS Code Tasks
+
+You can run the repository tasks via the Command Palette (no typing needed):
+
+1. Open the Command Palette (Ctrl+Shift+P) and choose `Tasks: Run Task`.
+2. Select one of the tasks, for example:
+
+   - `Check content consistency (fix)` — validates frontmatter and updates `content_status.json`.
+   - `Regenerate content_status.json from frontmatter` — rebuilds the index from all markdown files.
+   - `Run workflow transition (example)` — prompts for an article id and status then runs the workflow transition script.
+
+Running tasks from the Command Palette is useful during demos — it shows the command output in the integrated terminal and keeps the demo focused on editing instead of typing commands.
 
 If you need to regenerate `content_status.json` from files (migration step):
 
