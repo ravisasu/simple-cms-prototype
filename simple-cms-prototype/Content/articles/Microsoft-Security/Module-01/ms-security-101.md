@@ -3,7 +3,7 @@ id: "ms-security-101"
 title: "Introduction to Microsoft Security"
 course: "Microsoft-Security"
 module: "Module-01"
-status: "Draft"
+status: "Review"
 authors: ["Course Team"]
 last_updated: "2025-11-22"
 ---

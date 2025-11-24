@@ -91,8 +91,8 @@ for article in data.get("articles", []):
     # Match by ID, filename (with or without .md), or path basename
     article_path = article.get("path", "")
     article_filename = os.path.basename(article_path) if article_path else ""
-    
-    if (article.get("id") == article_id or 
+
+    if (article.get("id") == article_id or
         article.get("id") == article_arg or
         article_filename == article_md or
         article_filename == article_arg):
