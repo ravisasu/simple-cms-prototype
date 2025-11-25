@@ -5,7 +5,8 @@ from xhtml2pdf import pisa
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 
-FILES = [
+# Default files to convert if no arguments provided
+DEFAULT_FILES = [
     (os.path.join(ROOT, 'Author-QuickStart.md'), os.path.join(ROOT, 'Author-QuickStart.pdf')),
     (os.path.join(ROOT, 'Demo-cheatsheet.md'), os.path.join(ROOT, 'Demo-cheatsheet.pdf')),
 ]
@@ -43,8 +44,33 @@ def md_to_pdf(md_path, pdf_path):
 
 
 if __name__ == '__main__':
+    # Parse command line arguments
+    if len(sys.argv) > 1:
+        # Convert files specified on command line
+        files_to_convert = []
+        for arg in sys.argv[1:]:
+            if arg.startswith('--'):
+                continue  # Skip flags for now
+
+            # Handle relative or absolute paths
+            if os.path.isabs(arg):
+                md_path = arg
+            else:
+                md_path = os.path.join(ROOT, arg)
+
+            # Generate PDF path
+            if md_path.endswith('.md'):
+                pdf_path = md_path[:-3] + '.pdf'
+            else:
+                pdf_path = md_path + '.pdf'
+
+            files_to_convert.append((md_path, pdf_path))
+    else:
+        # No arguments: use default files
+        files_to_convert = DEFAULT_FILES
+
     ok_any = False
-    for md, pdf in FILES:
+    for md, pdf in files_to_convert:
         print(f"Converting: {os.path.basename(md)} -> {os.path.basename(pdf)}")
         ok = md_to_pdf(md, pdf)
         if ok:
