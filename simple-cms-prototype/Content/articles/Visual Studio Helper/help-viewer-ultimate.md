@@ -193,7 +193,7 @@ tab.</p>
 2.  Choose the **Individual Components** tab, then search for help
     viewer , or select **Help Viewer** under the **Code tools** section.
 
-<img src="media/image5.jpeg" style="width:6.5in;height:3.25in" />
+![](media/image5.png) 
 
 3.  Choose the **Modify** button to start the installation of Microsoft
     Help Viewer.
@@ -206,13 +206,13 @@ tab.</p>
 2.  Press **Ctrl**+**Q** and then type or enter **help viewer** in the
     search box.
 
-<img src="media/image6.jpeg" style="width:6.58753in;height:4.125in" />
+![](media/image6.png) 
 
 3.  Choose the result called **Install Help Viewer**.
 
 4.  In the dialog box that opens, choose the **Install** button.
 
-> <img src="media/image7.jpeg" style="width:6.6222in;height:4.97187in" />
+> ![](media/image7.png) 
 
 ## Related content
 

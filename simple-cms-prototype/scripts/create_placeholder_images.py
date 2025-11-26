@@ -6,9 +6,9 @@ media_folder = os.path.join(ROOT, 'Content', 'articles', 'Visual Studio Helper',
 
 # List of missing images with their formats
 missing_images = [
-    ('image5.jpeg', 'JPEG', (650, 325)),
-    ('image6.jpeg', 'JPEG', (659, 412)),
-    ('image7.jpeg', 'JPEG', (662, 497)),
+    ('image5.png', 'PNG', (650, 325)),
+    ('image6.png', 'PNG', (659, 412)),
+    ('image7.png', 'PNG', (662, 497)),
     ('image8.png', 'PNG', (50, 50)),
     ('image9.png', 'PNG', (20, 20)),
     ('image11.png', 'PNG', (20, 20)),
@@ -17,6 +17,9 @@ missing_images = [
     ('image15.png', 'PNG', (552, 127)),
     ('image16.png', 'PNG', (404, 385)),
     ('image17.png', 'PNG', (660, 281)),
+    ('image18.png', 'PNG', (50, 50)),
+    ('image19.png', 'PNG', (660, 510)),
+    ('image20.png', 'PNG', (80, 80)),
 ]
 
 for filename, format_type, size in missing_images:
