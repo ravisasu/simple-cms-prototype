@@ -24,36 +24,36 @@ missing_images = [
 
 for filename, format_type, size in missing_images:
     filepath = os.path.join(media_folder, filename)
-    
+
     # Create a new image with light gray background
     img = Image.new('RGB', size, color=(240, 240, 240))
     draw = ImageDraw.Draw(img)
-    
+
     # Draw border
     draw.rectangle([(0, 0), (size[0]-1, size[1]-1)], outline=(180, 180, 180), width=2)
-    
+
     # Add text label
     try:
         font = ImageFont.truetype("arial.ttf", min(size[0]//15, size[1]//5, 24))
     except:
         font = ImageFont.load_default()
-    
+
     text = f"Placeholder\n{filename}"
-    
+
     # Get text bounding box for centering
     bbox = draw.textbbox((0, 0), text, font=font)
     text_width = bbox[2] - bbox[0]
     text_height = bbox[3] - bbox[1]
-    
+
     position = ((size[0] - text_width) // 2, (size[1] - text_height) // 2)
     draw.text(position, text, fill=(100, 100, 100), font=font, align='center')
-    
+
     # Save
     if format_type == 'JPEG':
         img.save(filepath, 'JPEG', quality=85)
     else:
         img.save(filepath, 'PNG')
-    
+
     print(f"Created: {filename}")
 
 print(f"\nAll placeholder images created in: {media_folder}")
