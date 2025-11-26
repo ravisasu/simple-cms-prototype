@@ -27,6 +27,42 @@ def md_to_pdf(md_path, pdf_path):
     with open(md_path, 'r', encoding='utf-8') as f:
         md = f.read()
     html_body = markdown(md, extensions=['extra', 'tables', 'toc'])
+    # Ensure image references that are relative to the markdown file directory
+    # resolve correctly when converting to PDF. Replace src="media/..." with
+    # an absolute file:// path so pisa can load them regardless of cwd.
+    md_dir = os.path.dirname(md_path)
+    if md_dir:
+        # normalize path for file URLs on Windows
+        file_prefix = 'file:///' + md_dir.replace('\\', '/') + '/'
+        html_body = html_body.replace('src="media/', f'src="{file_prefix}media/')
+
+        # Convert local image file references to data URIs so xhtml2pdf can embed them
+        import re, base64
+
+        def _embed_file(match):
+            src = match.group(1)
+            # strip file:// if present
+            path = src
+            if path.startswith('file:///'):
+                # convert file:///C:/... to C:/...
+                path = path[8:] if path.startswith('file:///') and path[7] == '/' else path[8:]
+                # normalize leading slash if any
+                if path.startswith('/') and ':' in path[:3]:
+                    path = path[1:]
+            path = path.replace('/', os.sep)
+            if not os.path.exists(path):
+                return match.group(0)  # leave unchanged
+            ext = os.path.splitext(path)[1].lower().lstrip('.')
+            try:
+                with open(path, 'rb') as f:
+                    data = f.read()
+                b64 = base64.b64encode(data).decode('ascii')
+                mime = 'image/png' if ext == 'png' else ('image/jpeg' if ext in ('jpg','jpeg') else f'image/{ext}')
+                return f'src="data:{mime};base64,{b64}"'
+            except Exception:
+                return match.group(0)
+
+        html_body = re.sub(r'src="(file:///[^"]+\.(?:png|jpg|jpeg|gif))"', _embed_file, html_body, flags=re.IGNORECASE)
     html = f"""<!doctype html>
 <html>
 <head>
@@ -38,6 +74,8 @@ def md_to_pdf(md_path, pdf_path):
 </body>
 </html>
 """
+    # ensure output directory exists
+    os.makedirs(os.path.dirname(pdf_path), exist_ok=True)
     with open(pdf_path, 'wb') as out:
         pisa_status = pisa.CreatePDF(html, dest=out)
     return not pisa_status.err
